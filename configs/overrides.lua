@@ -33,7 +33,7 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
-    "vuels",
+    "tailwindcss",
 
     "rust_analyzer",
     "kotlin_language_server",

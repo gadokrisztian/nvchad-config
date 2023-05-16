@@ -5,7 +5,7 @@ local lspconfig = require("lspconfig")
 
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "tsserver", "vuels", "tailwindcss", "kotlin_language_server", "rust_analyzer" }
+local servers = { "tsserver", "kotlin_language_server", "rust_analyzer", "volar" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
