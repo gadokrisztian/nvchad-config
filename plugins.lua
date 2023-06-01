@@ -48,7 +48,31 @@ local plugins = {
     config = function (_, opts)
       require("rust-tools").setup(opts)
     end
-  }
+  },
+    {
+        "aserowy/tmux.nvim",
+        lazy=false,
+        config = function()
+            return require("tmux").setup {
+                navigation = {
+                    enable_default_keybindings = false,
+                }
+            }
+        end
+    },
+    {
+        "github/copilot.vim",
+        lazy = false,
+        config = function ()
+            vim.cmd [[
+                imap <silent><script><expr> <C-Right> copilot#Accept("\<CR>")
+                imap <silent> <C-Left> <Plug>(copilot-dismiss)
+                imap <silent> <C-Up> <Plug>(copilot-next)
+                imap <silent> <C-Down> <Plug>(copilot-previous)
+                let g:copilot_no_tab_map = v:true
+            ]]
+        end
+    }
 
 
 

@@ -11,7 +11,6 @@ M.treesitter = {
     "markdown",
     "rust",
     "python",
-    "kotlin",
   },
   indent = {
     enable = true,
@@ -36,7 +35,8 @@ M.mason = {
     "tailwindcss",
 
     "rust_analyzer",
-    "kotlin_language_server",
+    "zls",
+    "pyright"
   },
 }
 
